@@ -572,6 +572,12 @@ Callbacks
   the colors for multiclass problems as a numpy array.
   By :user:`Anne Beyer <AnneBeyer>`. :pr:`33651`
 
+- |Fix| :func:`inspection.permutation_importance` now computes the baseline score on
+  the same subsample as the permuted scores when `max_samples` is smaller than the
+  number of samples, so features the model never uses get an importance of exactly
+  zero instead of sampling noise.
+  By :user:`hdp01 <hdp01>`. :pr:`35041`
+
 :mod:`sklearn.linear_model`
 ---------------------------
 
